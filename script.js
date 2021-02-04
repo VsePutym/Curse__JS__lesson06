@@ -12,19 +12,18 @@ let isNumber = function (n) {
 function start() {
     let userNumber = +prompt('guess the number from 0 to 100');
     let num = result;
-    console.dir(num);
 
-    if (isNumber(userNumber) === true) {
+    if (isNumber(userNumber)) {
         if (userNumber === num) {
             alert('congratulations, you guessed it');
         } else if (userNumber > num) {
-            if (confirm('Try again it more') === true) {
+            if (confirm('Try again it more')) {
                 start();
             } else {
                 alert('game over');
             }
         } else if (userNumber < num) {
-            if (confirm('Try again it less') === true) {
+            if (confirm('Try again it less')) {
                 start();
             } else {
                 alert('game over');
@@ -34,6 +33,7 @@ function start() {
         confirm('is not a number');
             start();
         }
+        console.log(num);
     }
     
 
