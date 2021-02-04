@@ -3,14 +3,16 @@
 function getRandomNumber(max) {
     return Math.floor(Math.random()* Math.floor(max));
 }
-let num = getRandomNumber(100);
-console.log(num);
+let result = getRandomNumber(100);
+
 let isNumber = function (n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
 };
 
 function start() {
     let userNumber = +prompt('guess the number from 0 to 100');
+    let num = result;
+    console.dir(num);
 
     if (isNumber(userNumber) === true) {
         if (userNumber === num) {
@@ -33,6 +35,6 @@ function start() {
             start();
         }
     }
-
+    
 
 start();
