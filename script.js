@@ -10,11 +10,12 @@ function start() {
     };
     
     let num = getRandomNumber(100);
+    
 //? function main internal
     function newStart() {
         let userNumber = prompt('guess the number from 0 to 100');
         if (isNumber(userNumber)) {
-            if (userNumber === num) {
+            if (userNumber == num) {
                 alert('congratulations, you guessed it');
             } else if (userNumber > num) {
                 if (confirm('Try again it more')) {
@@ -26,7 +27,7 @@ function start() {
                 if (confirm('Try again it less')) {
                     newStart();
                 } else {
-                    newStart('game over');
+                    alert('game over');
                 }
             }
         } else {
@@ -36,6 +37,7 @@ function start() {
 
     }
     console.dir(newStart);
+    console.log(num);
     newStart();
 }
 start();
